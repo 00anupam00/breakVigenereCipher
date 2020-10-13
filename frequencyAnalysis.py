@@ -51,32 +51,32 @@ def decrypt(cipher, keyLength):
     plot_freq_analysis(eng, freqAnalysis, "No-Shift(assuming all letters as A in the key)")
 
     print("Freq Analysis of the key-letters with shift")
-    print("Plot Graph: 1st letter of the key shifted by 5 chars")
+    print("Plot Graph: 1st letter of the key shifted by 5 (A -> F) chars")
     analysis, transCipher = shift_analysis(cipher, 5, 0, keyLength)
     xValue = list(map(lambda x: eng[abs((eng.index(x) + 5) % 26)], list(eng)))
     plot_freq_analysis(xValue, analysis, "+5 shifted analysis for 1st letter in Key")
 
-    print("Plot Graph: 2nd letter of the key shifted by 11 chars")
+    print("Plot Graph: 2nd letter of the key shifted by 11 (A -> L) chars")
     analysis, transCipher = shift_analysis(transCipher, 11, 1, keyLength)
     xValue = list(map(lambda x: eng[abs((eng.index(x) + 11) % 26)], list(eng)))
     plot_freq_analysis(xValue, analysis, "+5 shifted analysis for 2nd letter in Key")
 
-    print("Plot Graph: 3rd letter of the key shifted by 14 chars")
+    print("Plot Graph: 3rd letter of the key shifted by 14 (A -> O) chars")
     analysis, transCipher = shift_analysis(transCipher, 14, 2, keyLength)
     xValue = list(map(lambda x: eng[abs((eng.index(x) + 14) % 26)], list(eng)))
     plot_freq_analysis(xValue, analysis, "+5 shifted analysis for 3rd letter in Key")
 
-    print("Plot Graph: 4th letter of the key shifted by 2 chars")
+    print("Plot Graph: 4th letter of the key shifted by 2 (A -> C) chars")
     analysis, transCipher = shift_analysis(transCipher, 2, 3, keyLength)
     xValue = list(map(lambda x: eng[abs((eng.index(x) + 2) % 26)], list(eng)))
     plot_freq_analysis(xValue, analysis, "+5 shifted analysis for 4th letter in Key")
 
-    print("Plot Graph: 5th letter of the key shifted by 10 chars")
+    print("Plot Graph: 5th letter of the key shifted by 10 (A -> K) chars")
     analysis, transCipher = shift_analysis(transCipher, 10, 4, keyLength)
     xValue = list(map(lambda x: eng[abs((eng.index(x) + 10) % 26)], list(eng)))
     plot_freq_analysis(xValue, analysis, "+5 shifted analysis for 5th letter in Key")
 
     print()
-    print()
+    print("Keyword: FLOCK")
     print("Decrypted Cipher: ")
     print(transCipher)
