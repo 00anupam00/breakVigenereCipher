@@ -13,6 +13,7 @@ def plot_freq_analysis(xValue, freqList, ylabel):
     plt.bar(xValue, freqList, color="red")
     plt.ylim(0, 0.10)
     plt.show()
+    plt.savefig('graphs/'+ylabel+'.png')
 
 
 # performs shift-analysis and transforms the cipher text according the probable key-letter

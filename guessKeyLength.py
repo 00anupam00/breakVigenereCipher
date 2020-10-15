@@ -11,6 +11,7 @@ def plot(x, y, c, gram):
     plt.xlabel("Key-Lengths Suggestion")
     plt.ylabel(str(gram)+"-Grams")
     plt.show()
+    plt.savefig('graphs/'+str(gram)+'-grams Analysis')
 
 
 # guess the probable key-length from the factors' list of the corresponding distance of the n-grams
