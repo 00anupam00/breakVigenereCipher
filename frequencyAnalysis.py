@@ -60,22 +60,22 @@ def decrypt(cipher, keyLength):
     print("Plot Graph: 2nd letter of the key shifted by 11 (A -> L) chars")
     analysis, transCipher = shift_analysis(transCipher, 11, 1, keyLength)
     xValue = list(map(lambda x: eng[abs((eng.index(x) + 11) % 26)], list(eng)))
-    plot_freq_analysis(xValue, analysis, "+5 shifted analysis for 2nd letter in Key")
+    plot_freq_analysis(xValue, analysis, "+11 shifted analysis for 2nd letter in Key")
 
     print("Plot Graph: 3rd letter of the key shifted by 14 (A -> O) chars")
     analysis, transCipher = shift_analysis(transCipher, 14, 2, keyLength)
     xValue = list(map(lambda x: eng[abs((eng.index(x) + 14) % 26)], list(eng)))
-    plot_freq_analysis(xValue, analysis, "+5 shifted analysis for 3rd letter in Key")
+    plot_freq_analysis(xValue, analysis, "+14 shifted analysis for 3rd letter in Key")
 
     print("Plot Graph: 4th letter of the key shifted by 2 (A -> C) chars")
     analysis, transCipher = shift_analysis(transCipher, 2, 3, keyLength)
     xValue = list(map(lambda x: eng[abs((eng.index(x) + 2) % 26)], list(eng)))
-    plot_freq_analysis(xValue, analysis, "+5 shifted analysis for 4th letter in Key")
+    plot_freq_analysis(xValue, analysis, "+2 shifted analysis for 4th letter in Key")
 
     print("Plot Graph: 5th letter of the key shifted by 10 (A -> K) chars")
     analysis, transCipher = shift_analysis(transCipher, 10, 4, keyLength)
     xValue = list(map(lambda x: eng[abs((eng.index(x) + 10) % 26)], list(eng)))
-    plot_freq_analysis(xValue, analysis, "+5 shifted analysis for 5th letter in Key")
+    plot_freq_analysis(xValue, analysis, "+10 shifted analysis for 5th letter in Key")
 
     print()
     print("Keyword: FLOCK")
